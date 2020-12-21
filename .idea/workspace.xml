@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9dc06062-e02e-4b40-8084-947522d8afc0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bubbleSort/bubbleSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../constantTimeStackMin/constantTimeStackMin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../evenOccurrence/evenOccurrence.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../hashTableResizing/hashTableResizing.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../insertionSort/insertionSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../mergeSort/mergeSort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../quicksort/quicksort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../rockPaperScissors/rockPaperScissors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/components/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/components/Form.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/components/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/components/List.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/components/ListItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/components/dummydata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/client/src/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/compiled/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/feature_todo.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/grocery-bags.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/mockup.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/schema.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../workshop/hrsf131-grocery-list-frontend-solution/webpack.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1lwFOoAwiA5zH3wFXh1pG2oGooW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9dc06062-e02e-4b40-8084-947522d8afc0" name="Default Changelist" comment="" />
+      <created>1608500219979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608500219979</updated>
+      <workItem from="1608500225741" duration="2599000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
