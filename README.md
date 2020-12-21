@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# DeFi: A Trends Web application for Decentralized Finance
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
