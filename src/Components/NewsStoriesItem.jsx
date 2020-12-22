@@ -16,14 +16,24 @@ const NewsText = styled.div`
 
 const Headline = styled.h3`
   font-family: aktiv-grotesk;
-  font-size: 2em;
+  font-size: 24px;
+  font-style: normal;
   font-weight: 700;
+  letter-spacing: normal;
+  line-height: 33.6px;
+  text-transform: none;
+  margin: 0;
 `;
 
 const Blurb = styled.p`
-  font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
+  font-size: 18px;
+  font-style: normal;
   font-weight: 400;
-  font-size: 1em;
+  letter-spacing: normal;
+  line-height: 30px;
+  text-transform: none;
+  margin: 0;
 `;
 
 function NewsStoriesItem() {

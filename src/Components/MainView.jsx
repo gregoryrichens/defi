@@ -2,20 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from './Logo.jsx';
 
+const VisualsContainer = styled.div`
+  flex-grow: 1;
+  display: flex;
+  width: 100%;
+`;
+
 const Title = styled.h1`
+  position: relative;
+  max-height: 20vh;
+  margin: 0;
+  top: 40%;
+  left: 20%;
   font-family: aktiv-grotesk;
   font-weight: 400;
-  font-style: italic;
-  font-size: 3em;
+  font-size: 5em;
 `
 
 const MainView = function() {
     return(
-        <div>
-            <Title>DeFi</Title>
-            <p className='subtitle'>the trend</p>
-            <Logo />
-        </div>
+        <VisualsContainer>
+          <Title>DeFi</Title>
+          <Logo />
+        </VisualsContainer>
     );
 }
 
