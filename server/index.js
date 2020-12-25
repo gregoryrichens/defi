@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const getStories = require('./controllers/stories.js');
+const controllers = require('./db/controllers/stories.js');
+const path = require('path');
 
 const app = express();
 const port = 8080;
@@ -19,13 +20,14 @@ db.once('open', () => {
   console.log('read the waiting launch orders');
 });
 
+app.use(express.static('public'));
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
   res.send('Move Zig');
 });
 
-app.get('/api/stories', getStories);
+app.get('/api/stories', controllers.getStories);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

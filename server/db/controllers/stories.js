@@ -1,14 +1,14 @@
-const Story = require('../models/stories.js');
+const models = require('../models/stories.js');
 const axios = require('axios');
-const $ = require('jQuery');
+const $ = require('jquery');
 
-async function getStories (req, res) {
+const getStories = async function (req, res) {
   // grab stories from CoinDesk RSS feed and store in database
   try {
     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    const results = await axios.get({url: 'https://www.coindesk.com/feed', withCredentials: false});
+    const results = await axios.get('https://www.coindesk.com/feed');
     console.log(results);
-    const xmlDoc = $.parseXML( results ),
+    const xmlDoc = $.parseXML(results),
     $xml = $( xmlDoc ),
     $xmlStories = $xml.find( 'item' );
     $xmlStories.each(async (i) => {
@@ -20,21 +20,20 @@ async function getStories (req, res) {
         blurb: blurb.text,
         link: link.text,
       }
-      await Story.create(storyObject);
+      await models.Story.create(storyObject);
     });
   } catch(error) {
     console.log(error);
-    res.status(400).send(error);
   }
 
   // pull three most recent stories from database
   try {
-    const data = await Story.find({}).limit(3);
+    const data = await models.Story.find({}).limit(3);
     res.json(data);
   } catch(error) {
     console.log(error);
-    res.status(404).send(error);
+    res.sendStatus(404);
   }
-}
+};
 
-export default getStories;
+module.exports.getStories = getStories;
