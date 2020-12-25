@@ -36,13 +36,13 @@ const Blurb = styled.p`
   margin: 0;
 `;
 
-function NewsStoriesItem() {
+function NewsStoriesItem({ headline, blurb }) {
   return(
     <StoryContainer>
       <NewsThumbnail />
       <NewsText>
-        <Headline>Headline Text</Headline>
-        <Blurb>Blah Blah Blah Blah blah blah</Blurb>
+        <Headline>{headline}</Headline>
+        <Blurb>{blurb}</Blurb>
       </NewsText>
     </StoryContainer>
   );

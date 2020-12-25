@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import NewsStoriesItem from './NewsStoriesItem.jsx';
 import { Divider } from '@material-ui/core';
+import $ from 'jquery';
 
 const Stories = styled.div`
   display: block;
@@ -40,6 +42,46 @@ const SectionNumber = styled.div`
 `;
 
 function NewsStories() {
+  const storyFiller = [{headline: 'story 1', blurb: 'blurb 1', link: 'link 1'}, {headline: 'story 2', blurb: 'blurb 2', link: 'link 2'}, {headline: 'story 3', blurb: 'blurb 3', link: 'link 3'}]
+  const [stories, setStories] = useState(storyFiller);
+
+  useEffect(() => {
+    // axios.defaults.headers.post['Access-Control-Allow-Origin'] = 'http://localhost:3000';
+    axios.get({ baseURL: 'https://www.coindesk.com/feed', headers: {'Access-Control-Allow-Origin':'http://localhost:3000'}, responseType: 'json'})
+      .then((results) => {
+        console.log(results);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // async function fetchStories () {
+    //   try {
+    //     let storiesArray = [];
+    //     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+    //     const results = await axios.get({url: 'https://www.coindesk.com/feed', withCredentials: false});
+    //     console.log(results);
+    //     const xmlDoc = $.parseXML( results ),
+    //     $xml = $( xmlDoc ),
+    //     $xmlStories = $xml.find( 'item' );
+    //     $xmlStories.each((i) => {
+    //       const headline = this.find('title');
+    //       const blurb = this.find('description');
+    //       const link = this.find('link');
+    //       const storyObject = {
+    //         headline: headline.text,
+    //         blurb: blurb.text,
+    //         link: link.text,
+    //       }
+    //       storiesArray.push(storyObject);
+    //     });
+    //     setStories(storiesArray);
+    //   } catch(error) {
+    //     console.error(error);
+    //   }
+    // }
+    // fetchStories();
+  })
+
   return (
     <Stories>
       <Heading>
@@ -47,9 +89,9 @@ function NewsStories() {
         <SectionTitle>news.</SectionTitle>
       </Heading>
       <Divider />
-      <NewsStoriesItem />
-      <NewsStoriesItem />
-      <NewsStoriesItem />
+      {stories.map((story, index) => {
+        return <NewsStoriesItem headline={story.headline} blurb={story.blurb} key={index} />
+      })}
     </Stories>
   );
 };
