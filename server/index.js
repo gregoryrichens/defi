@@ -4,7 +4,7 @@ const controllers = require('./db/controllers/stories.js');
 const path = require('path');
 
 const app = express();
-const port = 8080;
+const port = 3000;
 
 // set up mongoose connection with address for ec2 tweet storage
 mongoose.connect('mongodb://localhost/defi', {
@@ -20,7 +20,7 @@ db.once('open', () => {
   console.log('read the waiting launch orders');
 });
 
-app.use(express.static('public'));
+app.use(express.static('build'));
 app.use(express.json());
 
 app.get('/test', (req, res) => {

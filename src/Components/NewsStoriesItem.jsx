@@ -14,7 +14,7 @@ const NewsText = styled.div`
   display: block;
 `;
 
-const Headline = styled.h3`
+const Headline = styled.a`
   font-family: aktiv-grotesk;
   font-size: 24px;
   font-style: normal;
@@ -36,12 +36,12 @@ const Blurb = styled.p`
   margin: 0;
 `;
 
-function NewsStoriesItem({ headline, blurb }) {
+function NewsStoriesItem({ headline, blurb, link }) {
   return(
     <StoryContainer>
       <NewsThumbnail />
       <NewsText>
-        <Headline>{headline}</Headline>
+        <Headline href={link} target='_tab'>{headline}</Headline>
         <Blurb>{blurb}</Blurb>
       </NewsText>
     </StoryContainer>

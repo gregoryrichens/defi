@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const storySchema = new mongoose.Schema({
-  headline: {type: String, unique: true, dropDups: true},
+  headline: String,
   blurb: String,
   link: String,
   date: String,

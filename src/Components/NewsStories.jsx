@@ -45,10 +45,10 @@ function NewsStories() {
   const [stories, setStories] = useState(storyFiller);
 
   useEffect(() => {
-    // axios.defaults.headers.post['Access-Control-Allow-Origin'] = 'http://localhost:3000';
-    axios.get({ baseURL: 'https://www.coindesk.com/feed', headers: {'Access-Control-Allow-Origin':'http://localhost:3000'}, responseType: 'json'})
+    axios.get('/api/stories')
       .then((results) => {
         console.log(results);
+        setStories(results.data);
       })
       .catch((error) => {
         console.log(error);
@@ -63,7 +63,7 @@ function NewsStories() {
       </Heading>
       <Divider />
       {stories.map((story, index) => {
-        return <NewsStoriesItem headline={story.headline} blurb={story.blurb} key={index} />
+        return <NewsStoriesItem headline={story.headline} blurb={story.blurb} link={story.link} key={index} />
       })}
     </Stories>
   );
