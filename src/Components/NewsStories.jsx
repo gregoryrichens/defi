@@ -3,7 +3,6 @@ import axios from 'axios';
 import styled from 'styled-components';
 import NewsStoriesItem from './NewsStoriesItem.jsx';
 import { Divider } from '@material-ui/core';
-import $ from 'jquery';
 
 const Stories = styled.div`
   display: block;
@@ -54,32 +53,6 @@ function NewsStories() {
       .catch((error) => {
         console.log(error);
       });
-    // async function fetchStories () {
-    //   try {
-    //     let storiesArray = [];
-    //     axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-    //     const results = await axios.get({url: 'https://www.coindesk.com/feed', withCredentials: false});
-    //     console.log(results);
-    //     const xmlDoc = $.parseXML( results ),
-    //     $xml = $( xmlDoc ),
-    //     $xmlStories = $xml.find( 'item' );
-    //     $xmlStories.each((i) => {
-    //       const headline = this.find('title');
-    //       const blurb = this.find('description');
-    //       const link = this.find('link');
-    //       const storyObject = {
-    //         headline: headline.text,
-    //         blurb: blurb.text,
-    //         link: link.text,
-    //       }
-    //       storiesArray.push(storyObject);
-    //     });
-    //     setStories(storiesArray);
-    //   } catch(error) {
-    //     console.error(error);
-    //   }
-    // }
-    // fetchStories();
   })
 
   return (
