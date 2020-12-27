@@ -27,7 +27,7 @@ app.get('/test', (req, res) => {
   res.send('Move Zig');
 });
 
-app.get('/api/stories', await controllers.getStories);
+app.get('/api/stories', controllers.getStories);
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);

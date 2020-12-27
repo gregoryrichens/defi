@@ -4,22 +4,24 @@ let parser = new Parser();
 
 const getStories = async function (req, res) {
   // grab stories from CoinDesk RSS feed and store in database
-
-  let feed = await parser.parseURL('https://www.coindesk.com/feed');
-  await feed.items.forEach(async (item) => {
-    let story = {
-      headline: item.title,
-      blurb: item.description,
-      link: item.link,
-      date: item.date,
+  try {
+    let feed = await parser.parseURL('https://www.coindesk.com/feed');
+    console.log(feed);
+    for (let item of feed.items) {
+      let story = await {
+        headline: item.title,
+        blurb: item.contentSnippet,
+        link: item.link,
+        date: item.pubDate,
+      };
+      await models.Story.create(story);
+      console.log('story created');
     };
-    await models.Story.create(story);
-    console.log('story created');
-  });
-
-  const data = await models.Story.find({}).limit(3);
-  console.log(data);
-  res.json(data);
+    const data = await models.Story.find({}).limit(3);
+    res.json(data);
+  } catch(err) {
+    console.log(err);
+  }
 };
 
 module.exports.getStories = getStories;
