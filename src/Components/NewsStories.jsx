@@ -53,7 +53,7 @@ function NewsStories() {
       .catch((error) => {
         console.log(error);
       });
-  })
+  }, []);
 
   return (
     <Stories>
