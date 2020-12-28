@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 import NewsStoriesItem from './NewsStoriesItem.jsx';
 import { Divider } from '@material-ui/core';
@@ -40,6 +41,20 @@ const SectionNumber = styled.div`
 `;
 
 function NewsStories() {
+  const storyFiller = [{headline: 'story 1', blurb: 'blurb 1', link: 'link 1'}, {headline: 'story 2', blurb: 'blurb 2', link: 'link 2'}, {headline: 'story 3', blurb: 'blurb 3', link: 'link 3'}]
+  const [stories, setStories] = useState(storyFiller);
+
+  useEffect(() => {
+    axios.get('/api/stories')
+      .then((results) => {
+        console.log(results);
+        setStories(results.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  })
+
   return (
     <Stories>
       <Heading>
@@ -47,9 +62,9 @@ function NewsStories() {
         <SectionTitle>news.</SectionTitle>
       </Heading>
       <Divider />
-      <NewsStoriesItem />
-      <NewsStoriesItem />
-      <NewsStoriesItem />
+      {stories.map((story, index) => {
+        return <NewsStoriesItem headline={story.headline} blurb={story.blurb} link={story.link} key={index} />
+      })}
     </Stories>
   );
 };
