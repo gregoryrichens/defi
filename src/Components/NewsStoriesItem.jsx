@@ -23,6 +23,9 @@ const Headline = styled.a`
   line-height: 33.6px;
   text-transform: none;
   margin: 0;
+  text-decoration: none;
+  background-color: none;
+  color: #000000;
 `;
 
 const Blurb = styled.p`
