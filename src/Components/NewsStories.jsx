@@ -47,7 +47,6 @@ function NewsStories() {
   useEffect(() => {
     axios.get('/api/stories')
       .then((results) => {
-        console.log(results);
         setStories(results.data);
       })
       .catch((error) => {
@@ -63,7 +62,9 @@ function NewsStories() {
       </Heading>
       <Divider />
       {stories.map((story, index) => {
-        return <NewsStoriesItem headline={story.headline} blurb={story.blurb} link={story.link} key={index} />
+        return (
+          <NewsStoriesItem headline={story.headline} blurb={story.blurb} link={story.link} key={index} />
+        )
       })}
     </Stories>
   );

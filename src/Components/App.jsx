@@ -1,4 +1,3 @@
-import '../App.css';
 import MainView from './MainView.jsx';
 import styled from 'styled-components';
 import NewsStories from './NewsStories.jsx';
@@ -29,9 +28,10 @@ const BelowTheEnvelope = styled.div`
 `;
 
 
-function App(background) {
+function App() {
+
   return (
-    <AppContainer background={background}>
+    <AppContainer>
       <AboveTheEnvelope>
         <SubscribeForm />
         <MainView/>

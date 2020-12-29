@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Divider } from '@material-ui/core';
 
 const StoryContainer = styled.div`
-  border: 1px #000000;
   width: 100%;
 `;
 
@@ -20,23 +20,24 @@ const Headline = styled.a`
   font-style: normal;
   font-weight: 700;
   letter-spacing: normal;
-  line-height: 33.6px;
+  line-height: 33.7px;
   text-transform: none;
-  margin: 0;
+  margin-bottom: 10px;
   text-decoration: none;
   background-color: none;
   color: #000000;
 `;
 
 const Blurb = styled.p`
-  font-family: "Roboto Mono";
+  font-family: "Helvetica";
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: normal;
   line-height: 30px;
   text-transform: none;
-  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: 1px #0000001f;
 `;
 
 function NewsStoriesItem({ headline, blurb, link }) {
@@ -44,9 +45,10 @@ function NewsStoriesItem({ headline, blurb, link }) {
     <StoryContainer>
       <NewsThumbnail />
       <NewsText>
-        <Headline href={link} target='_tab'>{headline}</Headline>
+        <Headline href={link} target='_tab'>{headline.toLowerCase()}</Headline>
         <Blurb>{blurb}</Blurb>
       </NewsText>
+      <Divider />
     </StoryContainer>
   );
 };
