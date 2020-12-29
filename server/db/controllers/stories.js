@@ -6,7 +6,6 @@ const getStories = async function (req, res) {
   // grab stories from CoinDesk RSS feed and store in database
   try {
     let feed = await parser.parseURL('https://www.coindesk.com/feed');
-    console.log(feed);
     let data = [];
     for (let item = 0; item < 3; item++) {
       let story = {
