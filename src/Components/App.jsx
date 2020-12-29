@@ -1,46 +1,50 @@
 import MainView from './MainView.jsx';
-import styled from 'styled-components';
+import { makeStyles } from '@material-ui/core/styles';
+// import Box from '@material-ui/core/Box';
 import NewsStories from './NewsStories.jsx';
 import ThinkerFeed from './ThinkerFeed.jsx';
 import SubscribeForm from './SubscribeForm.jsx';
 // import background from '../background.jpg';
 
-const AppContainer = styled.div`
-  width: 100%;
-  display: block;
-  box-sizing: border-box;
-`;
-const AboveTheEnvelope = styled.div`
-  display: flex;
-  width: 100%;
-  max-height: 90vh;
-  position: relative;
-  left: 0px;
-  padding: 50px 0;
-`;
+const useStyles = makeStyles({
+  appContainer: {
+    width: '100%',
+    display: 'block',
+    'box-sizing': 'border-box',
+  },
+  aboveTheEnvelope: {
+    display: 'flex',
+    width: '100%',
+    'max-height': '90vh',
+    position: 'relative',
+    left: '0px',
+    padding: '50px 0',
+  },
+  belowTheEnvelope: {
+    display: 'flex',
+    width: '100%',
+    position: 'relative',
+    left: '0px',
+    padding: '0 0 50px 0',
+  },
+});
 
-const BelowTheEnvelope = styled.div`
-  display: flex;
-  width: 100%;
-  position: relative;
-  left: 0px;
-  padding: 0 0 50px 0;
-`;
 
 
 function App() {
+  const classes = useStyles();
 
   return (
-    <AppContainer>
-      <AboveTheEnvelope>
+    <div className={classes.appContainer}>
+      <div className={classes.aboveTheEnvelope}>
         <SubscribeForm />
         <MainView/>
-      </AboveTheEnvelope>
-      <BelowTheEnvelope>
+      </div>
+      <div className={classes.belowTheEnvelope}>
         <NewsStories />
         <ThinkerFeed />
-      </BelowTheEnvelope>
-    </AppContainer>
+      </div>
+    </div>
   );
 }
 

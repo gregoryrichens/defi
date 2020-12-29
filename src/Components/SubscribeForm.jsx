@@ -1,52 +1,63 @@
 import React from 'react';
-import styled from 'styled-components';
 import { FormControl, Input, InputLabel, IconButton } from '@material-ui/core';
-import MarkunreadMailboxRounded from '@material-ui/icons/MarkunreadMailboxRounded';
+import { makeStyles } from '@material-ui/core/styles';
+import bitcoin from 'cryptocurrency-icons/svg/black/btc.svg';
 
-const FormContainer = styled.div`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-  width: 100%;
-  margin: 0 0 0 15%;
-`;
-
-const Form = styled.form`
-  position: relative;
-  max-height: 10vh;
-  width: 100%;
-`;
-
-const FormHeadline = styled.h1`
-  font-family: aktiv-grotesk;
-`;
-
-const NewsletterDescription = styled.p`
-  font-family: 'Roboto Mono';
-`;
-
-const NewsletterTerms = styled.p`
-  font-family: 'Roboto Mono';
-`;
+const useStyles = makeStyles({
+  formContainer: {
+    'flex-grow': '1',
+    display: 'flex',
+    'flex-direction': 'column',
+    'align-content': 'center',
+    'justify-content': 'center',
+    width: '100%',
+    margin: '0 0 0 15%',
+  },
+  form: {
+    position: 'relative',
+    'max-height': '10vh',
+    width: '100%',
+  },
+  formControl: {
+    display: 'flex',
+    'flex-direction': 'row',
+  },
+  input: {
+    'flex-grow': '5',
+  },
+  iconButton: {
+    'flex-grow': '1',
+    'margin-left': '10px',
+  },
+  formHeadline: {
+    'font-family': 'aktiv-grotesk',
+  },
+  newsletterDescription: {
+    'font-family': '"Roboto Mono"',
+  },
+  newsletterTerms: {
+    'font-family': '"Roboto Mono"',
+  }
+});
 
 function SubscribeForm() {
+  const classes = useStyles();
+
   return (
-    <FormContainer>
-      <FormHeadline>top stories. top minds. <br/> no frills.</FormHeadline>
-      <NewsletterDescription> like our content? sign up for our weekly newsletter</NewsletterDescription>
-      <Form noValidate autoComplete="off">
-        <FormControl>
+    <div className={classes.formContainer}>
+      <h1 className={classes.formHeadline}>top stories. top minds. <br/> no frills.</h1>
+      <p className={classes.newsletterDescription}> like our content? sign up for our weekly newsletter</p>
+      <form className={classes.form} noValidate autoComplete="off">
+        <FormControl className={classes.formControl}>
           <InputLabel htmlFor="component-simple">Email Address</InputLabel>
           <Input id="component-simple" />
           <IconButton type='submit'>
-            <MarkunreadMailboxRounded/>
+            <img src={bitcoin} alt='bitcoin svg'/>
           </IconButton>
         </FormControl>
-      </Form>
-      <NewsletterTerms>i agree to receive weekly digest emails re: the most important Crypto/DeFi trends</NewsletterTerms>
-    </FormContainer>
+      </form>
+      <p className={classes.newsletterTerms}>i agree to receive weekly digest emails re: the most important Crypto/DeFi trends</p>
+    </div>
   );
 };
 
