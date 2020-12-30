@@ -1,4 +1,3 @@
-const models = require('../models/stories.js');
 const Parser = require('rss-parser');
 let parser = new Parser();
 

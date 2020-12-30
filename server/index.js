@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const controllers = require('./db/controllers/stories.js');
-const path = require('path');
+const stories = require('./db/controllers/stories.js');
+const contacts = require('./db/controllers/contacts.js')
 
 const app = express();
 const port = 3000;
@@ -27,7 +27,9 @@ app.get('/test', (req, res) => {
   res.send('Move Zig');
 });
 
-app.get('/api/stories', controllers.getStories);
+app.get('/api/stories', stories.getStories);
+
+app.post('/api/email', contacts.createContact)
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
