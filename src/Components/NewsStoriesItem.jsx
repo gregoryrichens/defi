@@ -5,6 +5,7 @@ import { Divider } from '@material-ui/core';
 const useStyles = makeStyles({
   storyContainer: {
     width: '100%',
+    'margin-top': '10px',
   },
   newsThumbnail: {
     width: '33%',

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FormControl, Input, InputLabel, IconButton } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
+import axios from 'axios';
 import bitcoin from 'cryptocurrency-icons/svg/black/btc.svg';
 
 const useStyles = makeStyles({
@@ -21,6 +22,12 @@ const useStyles = makeStyles({
   formControl: {
     display: 'flex',
     'flex-direction': 'row',
+    '& label.Mui-focused': {
+      color: 'grey',
+    },
+    '& .MuiInput-underline:after': {
+      borderBottomColor: 'grey',
+    },
   },
   input: {
     'flex-grow': '5',
@@ -40,17 +47,26 @@ const useStyles = makeStyles({
   }
 });
 
-function SubscribeForm() {
+function SubscribeForm({ setZoom }) {
   const classes = useStyles();
+  const [text, setText] = useState('');
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log(e.target[0].value);
+    // axios.post('/api/email')
+    setText('');
+    setZoom(true);
+  }
 
   return (
     <div className={classes.formContainer}>
       <h1 className={classes.formHeadline}>top stories. top minds. <br/> no frills.</h1>
       <p className={classes.newsletterDescription}> like our content? sign up for our weekly newsletter</p>
-      <form className={classes.form} noValidate autoComplete="off">
-        <FormControl className={classes.formControl}>
+      <form className={classes.form} noValidate autoComplete="off" onSubmit={(e) => handleClick(e)}>
+        <FormControl className={classes.formControl} color='grey'>
           <InputLabel htmlFor="component-simple">Email Address</InputLabel>
-          <Input id="component-simple" />
+          <Input id="component-simple" value={text} onChange={(e) => {setText(e.target.value)}}/>
           <IconButton type='submit'>
             <img src={bitcoin} alt='bitcoin svg'/>
           </IconButton>
