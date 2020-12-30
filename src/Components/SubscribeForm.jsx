@@ -53,8 +53,19 @@ function SubscribeForm({ setZoom }) {
 
   const handleClick = (e) => {
     e.preventDefault();
+
+    // create a record
     console.log(e.target[0].value);
-    // axios.post('/api/email')
+    axios.post('/api/email', {
+      email: e.target[0].value,
+      contact: true,
+    })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     setText('');
     setZoom(true);
   }
