@@ -77,7 +77,7 @@ function SubscribeForm({ setZoom }) {
       <form className={classes.form} noValidate autoComplete="off" onSubmit={(e) => handleClick(e)}>
         <FormControl className={classes.formControl} color='grey'>
           <InputLabel htmlFor="component-simple">Email Address</InputLabel>
-          <Input id="component-simple" value={text} onChange={(e) => {setText(e.target.value)}}/>
+          <Input type="email" id="component-simple" value={text} onChange={(e) => {setText(e.target.value)}}/>
           <IconButton type='submit'>
             <img src={bitcoin} alt='bitcoin svg'/>
           </IconButton>
