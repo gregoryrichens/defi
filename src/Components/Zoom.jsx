@@ -37,7 +37,7 @@ const useStyles = makeStyles({
   heading: {
     display: 'flex',
     'flex-direction': 'row',
-    'margin-top': '20%',
+    'margin-top': '10%',
   },
   text: {
     'font-family': '"Roboto Mono"',

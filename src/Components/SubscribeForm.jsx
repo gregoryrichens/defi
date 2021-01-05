@@ -74,7 +74,7 @@ function SubscribeForm({ setZoom }) {
     <div className={classes.formContainer}>
       <h1 className={classes.formHeadline}>top stories. top minds. <br/> no frills.</h1>
       <p className={classes.newsletterDescription}> like our content? sign up for our weekly newsletter</p>
-      <form className={classes.form} noValidate autoComplete="off" onSubmit={(e) => handleClick(e)}>
+      <form className={classes.form} autoComplete="off" onSubmit={(e) => handleClick(e)}>
         <FormControl className={classes.formControl} color='grey'>
           <InputLabel htmlFor="component-simple">Email Address</InputLabel>
           <Input type="email" id="component-simple" value={text} onChange={(e) => {setText(e.target.value)}}/>
