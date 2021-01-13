@@ -30,7 +30,20 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## api routes
 
-### test route
+No public routes currently available.
+
+### News Stories
+This application does make use of the coindesk RSS feed, with plans to add more feeds in the future. You can access the feed for yourself here: 
+https://www.coindesk.com/feed
+
+Many options are available for parsing XML - this project utilizes [rss-parser npm package](https://www.npmjs.com/package/rss-parser)
+
+### Thinker Feed
+Provisioning access to the Twitter api can be time-consuming. Customized feed is displayed here via an iframe-based application, which syntax provides a simplified wrapper for the Twitter api that cooperates with a react ecosystem. More information can be found via the [react-twitter-widgets npm module](https://www.npmjs.com/package/react-twitter-widgets)
+
+### Email subscription
+The api for accessing the database model to save a new subscriber as well as the api to retrieve subscriber emails is necessarily obfuscated.
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
