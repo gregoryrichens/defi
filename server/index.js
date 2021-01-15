@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 // set up mongoose connection with address for ec2 tweet storage
-mongoose.connect('mongodb://localhost/defi', {
+mongoose.connect('mongodb://database/defi', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
